@@ -16,7 +16,7 @@ public class ConnectivityWorker(
 
         await DoWork();
 
-        using var timer = new PeriodicTimer(TimeSpan.FromMinutes(1));
+        using var timer = new PeriodicTimer(TimeSpan.FromSeconds(5));
 
         try
         {
