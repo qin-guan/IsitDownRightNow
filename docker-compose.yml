@@ -1,0 +1,6 @@
+﻿services:
+  isitdownrightnow.workerservice:
+    image: isitdownrightnow.workerservice
+    build:
+      context: .
+      dockerfile: IsitDownRightNow.WorkerService/Dockerfile
