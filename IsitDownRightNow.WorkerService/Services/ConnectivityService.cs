@@ -1,8 +1,8 @@
 using System.Net.NetworkInformation;
-using IsitDownRightNow.CommandLine.Configuration;
+using IsitDownRightNow.WorkerService.Configuration;
 using Microsoft.Extensions.Options;
 
-namespace IsitDownRightNow.CommandLine.Services;
+namespace IsitDownRightNow.WorkerService.Services;
 
 public class ConnectivityService(IOptions<NetworkOptions> options)
 {

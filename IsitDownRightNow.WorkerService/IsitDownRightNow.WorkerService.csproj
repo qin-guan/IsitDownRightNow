@@ -10,11 +10,16 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
     </ItemGroup>
 
     <ItemGroup>
       <Content Include="..\.dockerignore">
         <Link>.dockerignore</Link>
       </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\IsitDownRightNow.ServiceDefaults\IsitDownRightNow.ServiceDefaults.csproj" />
     </ItemGroup>
 </Project>

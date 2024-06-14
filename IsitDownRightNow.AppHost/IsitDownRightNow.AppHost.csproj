@@ -13,4 +13,8 @@
         <PackageReference Include="Aspire.Hosting.AppHost" Version="8.0.1"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\IsitDownRightNow.WorkerService\IsitDownRightNow.WorkerService.csproj" />
+    </ItemGroup>
+
 </Project>

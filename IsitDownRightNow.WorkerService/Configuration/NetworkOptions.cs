@@ -1,4 +1,4 @@
-namespace IsitDownRightNow.CommandLine.Configuration;
+namespace IsitDownRightNow.WorkerService.Configuration;
 
 public class NetworkOptions
 {
