@@ -4,8 +4,8 @@
     pid: host
     cgroup: host
     environment:
-      - DD_API_KEY=${DD_API_KEY}
-      - DD_HOSTNAME=${DD_API_KEY}
+      - DD_API_KEY=$DD_API_KEY
+      - DD_HOSTNAME=$DD_HOSTNAME
       - DD_SITE=datadoghq.com
       - DD_OTLP_CONFIG_LOGS_ENABLED=true
       - DD_LOGS_ENABLED=true

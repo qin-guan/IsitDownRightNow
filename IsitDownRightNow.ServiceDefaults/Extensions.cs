@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using OpenTelemetry;
 using OpenTelemetry.Metrics;
+using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 
 namespace IsitDownRightNow.ServiceDefaults;
@@ -50,6 +51,7 @@ public static class Extensions
         });
 
         builder.Services.AddOpenTelemetry()
+            .ConfigureResource(resource => { resource.AddService(builder.Environment.ApplicationName); })
             .WithMetrics(metrics =>
             {
                 metrics.AddAspNetCoreInstrumentation()

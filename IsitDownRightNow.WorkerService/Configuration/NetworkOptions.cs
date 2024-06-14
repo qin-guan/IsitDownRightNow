@@ -2,5 +2,5 @@ namespace IsitDownRightNow.WorkerService.Configuration;
 
 public class NetworkOptions
 {
-    public string ControllerIPAddress { get; set; } = "10.0.0.57";
+    public string ControllerIPAddress { get; set; }
 }

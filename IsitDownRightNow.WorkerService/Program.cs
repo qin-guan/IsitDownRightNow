@@ -9,11 +9,15 @@ var builder = Host.CreateApplicationBuilder(args);
 
 builder.AddServiceDefaults();
 
-builder.Services.Configure<NetworkOptions>(
-    builder.Configuration.GetSection(nameof(NetworkOptions))
-);
+builder.Services.AddOptions<NetworkOptions>()
+    .Bind(
+        builder.Configuration.GetSection(nameof(NetworkOptions))
+    )
+    .Validate(options => !string.IsNullOrEmpty(options.ControllerIPAddress))
+    .ValidateOnStart();
 
-builder.Services.AddHttpClient<ReflectorService>();
+builder.Services.AddHttpClient<ReflectorService>()
+    .AddStandardResilienceHandler();
 builder.Services.AddSingleton<ConnectivityService>();
 builder.Services.AddHostedService<ConnectivityWorker>();
 
