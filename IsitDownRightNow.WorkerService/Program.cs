@@ -18,10 +18,9 @@ builder.Services.AddOptions<NetworkOptions>()
 
 builder.Services.AddHttpClient<ReflectorService>()
     .AddStandardResilienceHandler();
+
 builder.Services.AddSingleton<ConnectivityService>();
 builder.Services.AddHostedService<ConnectivityWorker>();
-
-builder.Services.AddHostedService<Worker>();
 
 var host = builder.Build();
 host.Run();
