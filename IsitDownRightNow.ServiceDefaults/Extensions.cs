@@ -77,6 +77,7 @@ public static class Extensions
 
         if (useOtlpExporter)
         {
+            Console.WriteLine("Using OTLP exporter {0}", builder.Configuration["OTEL_EXPORTER_OTLP_ENDPOINT"]);
             builder.Services.AddOpenTelemetry().UseOtlpExporter();
         }
 
