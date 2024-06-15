@@ -21,6 +21,8 @@
       - 4318:4318
   isitdownrightnow.workerservice:
     image: isitdownrightnow.workerservice
+    environment:
+      - NetworkOptions__ControllerIPAddress=$NetworkOptions__ControllerIPAddress
     build:
       context: .
       dockerfile: IsitDownRightNow.WorkerService/Dockerfile
