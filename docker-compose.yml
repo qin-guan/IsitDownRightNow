@@ -3,6 +3,7 @@
     image: public.ecr.aws/datadog/agent
     pid: host
     cgroup: host
+    restart: unless-stopped
     environment:
       - DD_API_KEY=$DD_API_KEY
       - DD_HOSTNAME=$DD_HOSTNAME
@@ -21,6 +22,7 @@
       - 4318:4318
   isitdownrightnow.workerservice:
     image: isitdownrightnow.workerservice
+    restart: unless-stopped
     environment:
       - NetworkOptions__ControllerIPAddress=$NetworkOptions__ControllerIPAddress
       - OTEL_EXPORTER_OTLP_ENDPOINT=http://datadog-agent:4317/

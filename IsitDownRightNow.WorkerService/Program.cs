@@ -1,5 +1,4 @@
 using IsitDownRightNow.ServiceDefaults;
-using IsitDownRightNow.WorkerService;
 using IsitDownRightNow.WorkerService.Configuration;
 using IsitDownRightNow.WorkerService.Services;
 using IsitDownRightNow.WorkerService.Services.Reflector;
